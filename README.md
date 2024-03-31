@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Contri
+
+Contri is a project designed for educational purposes to simulate fake contributions on GitHub profiles. This project is intended to help users understand how contribution graphs work on GitHub and practice making commits in a controlled environment.
+
+## Purpose
+
+The main purpose of Contri is to provide a learning platform for users who want to:
+
+- Learn about GitHub contribution graphs and how commits affect them.
+- Practice making commits and understanding their impact on contribution graphs.
+- Experiment with commit dates and messages to see how they appear on the GitHub profile.
+
+## Disclaimer
+
+Please note the following points regarding the use of Contri:
+
+- Contri is solely for educational and learning purposes.
+- Contri generates fake commits that do not represent real contributions to projects.
+- Contri should not be used to misrepresent actual contributions on GitHub profiles.
+- Users of Contri are responsible for using it ethically and in compliance with GitHub's terms of service.
 
 ## Getting Started
 
-First, run the development server:
+To use Contri, follow these steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. First create a github repo for this project where all your fake commits will be committed and initialized git in your project.
+ ```bash
+  Run commands -
+  - git init
+  - git remote add origin <your-repo-hhtp>
+  ```
+2. Clone the Contri repository to your local machine.
+3. Install any dependencies required by Contri (if applicable).
+4. Install all the libraries by `npm i` command.
+5. Create `.env` file and save `MONGO_URL` in it.
+6. Run command `npm run dev`.
+7. Use Contri to simulate fake commits on your GitHub profile.
+8. Experiment with different commit messages, dates, and frequencies.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Note
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+1. by default it has rangle for ! year for fake commits , so if your account is not even a year old it wont work.
+2. So according to when your account was made , you can alter the code in `/src/app/api/magic/route.js` having line
+   ```bash
+    const x = random(0, 10);
+    const y = random(0, 10);
+    const date = moment().subtract(8 , "w").add(x , "d").add(y , "d").format();
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Contributing
 
-## Learn More
+If you find any issues or have suggestions for improving Contri, feel free to contribute by:
 
-To learn more about Next.js, take a look at the following resources:
+1. Opening an issue to report a bug or suggest an enhancement.
+2. Forking the Contri repository, making changes, and submitting a pull request.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Contri is licensed under the [MIT License](LICENSE.md). See the LICENSE file for more details.
 
-## Deploy on Vercel
+## Contact
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+For any questions or inquiries about Contri, you can reach out to the project maintainer at [MAIL HERE](mailto:rishabhpandey230@.com).
