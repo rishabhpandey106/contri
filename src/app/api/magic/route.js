@@ -36,7 +36,7 @@ const makecommit = n => {
     
     const PATH = ('../../git/contri/src/app/json/contributions.json')
     const x = random(0, 10);
-    const y = random(0, 6);
+    const y = random(0, 10);
     const date = moment().subtract(8 , "w").add(x , "d").add(y , "d").format();
     console.log(PATH)
 
