@@ -87,7 +87,7 @@ export default function Form() {
 
           <p className="mt-10 text-center text-sm text-gray-500">
             Want to learn Docker?{' '}
-            <a href="#" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
+            <a href="https://github.com/rishabhpandey106/docker-hindi" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
               Start Learning
             </a>
           </p>
